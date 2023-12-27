@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>veiw product</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+  <%- include('header.ejs')%> 
+  <div class="container-fluid mt-3">
+  <h1 class="text-center display-1 bg-warning"> Veiw products Data</h1>
+    <div class="row">
+      <%- include('left.ejs')%>
+      <div class="col-md-8 p-3">
+<% if(productdata.length>0)
+       {%>
+          <table class="table table-bordered table-sm" >
+           <thead>
+                 <tr>
+                    <th>Image</th>
+                     <th>Name</th>
+                     <th>Price</th>
+                     <th>Description</th> 
+                     <th>action</th>        
+                 </tr>
+          </thead>
+
+          <tbody>
+          <% for(var i=0;i<productdata.length; i++)
+               {%>
+                   <tr>
+                       <td><img src="<%= productdata[i].product_image %>" width="60" height="60"></td>
+                       <td><%= productdata[i].product_name %></td>
+                       <td><%= productdata[i].product_price %></td>
+                       <td><%= productdata[i].product_description %></td>                      
+                       <td>
+                                <a href="/editP/<%= productdata[i]._id %>">Edit</a>/
+                                <a href="/deleteproduct/<%= productdata[i]._id %>">Delete</a></td>
+                        
+                       
+                        </from>        
+                       </td>
+                  </tr>
+               <%}
+          %>
+            </tbody>
+ 
+        </table>
+  <%}
+      else {%>
+            No record found
+           <% } 
+ %>
+      </div>               
+     </div>                   
+</div> 
+
+
+</body>
+</html>   

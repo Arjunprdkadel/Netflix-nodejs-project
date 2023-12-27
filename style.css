@@ -1,0 +1,31 @@
+/* login file */
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+    
+        .main{
+            background: url('/assets/images/wall.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;            
+         }
+  
+.container{
+    margin: auto;
+    margin-bottom: 30px;
+    height: 500px;         
+    background: rgba(65, 65, 105, 0.7);
+    color:yellow;
+    padding-top: 10px;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    font-size: large;
+    padding-bottom: 90px;
+ }
+ 
+.container h1{color:red;
+              font-size: 40px;
+            }          
+.gap{padding:10px;}
+
+          

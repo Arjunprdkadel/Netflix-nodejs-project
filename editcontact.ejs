@@ -1,0 +1,50 @@
+
+
+<html>
+<head>
+  <title>Edit contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+  
+
+  <%- include('header.ejs')%>
+
+<div class="container-fluid mt-3">
+  <h1 class="text-center bg-warning">Edit contact here</h1>
+  <div class="row">
+    
+    
+      <%- include('left.ejs')%>
+      
+
+<!--* Section content Start *--->
+    <div class="col-md-8">
+      <form action="" method="post" >
+        <div class="mb-3 mt-3">
+          <label for="Name" class="form-label">Name:</label>
+          <input type="text" id="name" name="name" value="<%= edata.name%>" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="text" id="email" name="email" value="<%= edata.email%>"  placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message:</label>
+          <input type="message" id="message" name="message" value="<%= edata.message%>" placeholder="Enter your message" required>
+        </div>
+      
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    </div>
+  </div>
+<!--* Section content End *--->
+
+ 
+</body>
+</html>

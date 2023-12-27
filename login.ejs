@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('./common/header1.ejs')%>
+
+    <div class="main">    
+        <div class="container">
+            <form action="/login" method="post">
+                <h1>Login With User Id</h1>
+
+                <div class="input_box">
+                  <level>Email</level>
+                  <input type="mail"name="mail"required>                   
+                </div>  
+    
+                <div class="input_box">
+                    <level>Password</level>
+                    <input type="password"name="password" required>      
+                </div>         
+                
+                <!-- <button type="submit" style="padding: 10px 15px;"> Login now</button> -->
+                <button class="btn btn-warning btn-lg btn-block" type="submit"><a href="/productl" class="text-white text-decoration-none">Login</a></button>
+                
+
+                <div class="register_link">
+                    <p>send us on <a href="#">NetflixIndiaMoreFun@gmail.com </a> </p>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+
+    <link rel="stylesheet" href="../assets/style5.css">
+    <%- include('./common/footer.ejs')%>
+</body>
+</html>

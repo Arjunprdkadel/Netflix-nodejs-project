@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact page</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <%- include('./common/header1.ejs')%>
+    
+    <div class="main">    
+        <div class="container">
+            <form action="/contact" method="post">
+                <h1>Contact Us</h1>
+                <div class="input_box">
+                    <input type="text"placeholder="Name" name="name" required>
+                    
+                </div>    
+                <div class="input_box">
+                    <input type="Email" placeholder="E-mail address" name="email" required >                    
+                </div>
+    
+
+                <div class="input_box1">
+                    <input type="textarea" placeholder="Write Your Querry Here..." name="message"class="text">                    
+                </div>
+                
+                
+                <button type="submit" class="btn1"> Send</button>
+            
+
+                <div class="register_link">
+                    <p>send us on <a href="#">NetflixIndiaMoreFun@gmail.com </a> </p>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+ <!-- this is for contact.ejs file -->
+<link rel="stylesheet" href="/assets/style6.css"> 
+<%- include('./common/footer.ejs')%>
+</body>
+</html>

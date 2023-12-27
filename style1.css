@@ -1,0 +1,19 @@
+.container{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:100%;
+    background-color:#171616;
+    color:#fff;
+    text-align: center;
+}
+
+.container h1{text-align: center;
+          font-size: 35px;
+          color:blue;
+          padding:25px 0;}   
+.name{
+padding: 15px 0px;
+}       
+.gap{padding:10px;} 
+   
